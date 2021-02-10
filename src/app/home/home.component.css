@@ -1,0 +1,23 @@
+.heading {
+  color: white;
+}
+
+mat-card {
+  /*background: linear-gradient(45deg, transparent, orangered);*/
+}
+
+.intro p {
+  color: #370606;
+  padding: 10px;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.intro {
+  background-image: url("src/assets/img/pexels-photo-82256.jpeg");
+  background-size: cover;
+  border-radius: 10px;
+  max-width: 900px;
+  min-width: 300px;
+  margin: 20px;
+}

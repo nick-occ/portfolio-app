@@ -24,6 +24,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -87,6 +89,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -120,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "portfolio-app"
+  "defaultProject": "portfolio-app",
+  "cli": {
+    "analytics": "6464059b-0ac0-4468-b9d5-ed8dba01a014"
+  }
 }

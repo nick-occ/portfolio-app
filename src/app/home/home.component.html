@@ -1,0 +1,27 @@
+<div class="container-fluid ">
+  <div class="d-flex flex-wrap flex-row justify-content-around align-items-center">
+    <div class="text-center">
+      <img style="max-width: 200px; margin: 20px;" class="img-fluid" src="assets/img/59-NicholasOcchipinti7190-rev1.png" alt="picture">
+      <h3 style="font-family: monospace; font-weight: bold;" class="heading">Knowledge in Development, Geographic Information Systems and Data Science</h3>
+    </div>
+    <div class="intro w-auto" style="">
+      <p style="font-family: monospace;">
+      My name is Nicholas Occhipinti and I have over 15 years of experience working in the Geographic Information Systems field.
+      I have worked on projects analyzing GIS data, designing maps, developing web mapping applications, building automated GIS processes and administering GIS servers and applications.
+      <br><br>
+      I have a graduate certificate from UNC Charlotte in Data Science and Business Analytics and I am currently pursuing my Masters in the DSBA program.
+      My objective is to combine my knowledge of Data Science and GIS to find solutions to problems.  Some areas of interest are network science object recognition and image classification
+      <br><br>
+      This portfolio showcases the different projects I have worked on and my versatility of skills that I have developed throughout my career.
+      The resume section shows my experiences and education and below there are links to my GitHub, LinkedIn and digital resume.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div style="padding: 10px;">
+  <h1 class="heading">Featured Projects</h1>
+   <div class="d-flex flex-wrap justify-content-around">
+    <app-project style="margin: 10px;" [project]="project" *ngFor="let project of this.projects"></app-project>
+  </div>
+</div>

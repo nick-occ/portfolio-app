@@ -1,0 +1,24 @@
+  <mat-toolbar fxLayout="row">
+    <a [routerLink]="['']">
+        <mat-icon style="color: white;">home</mat-icon>
+    </a>
+    <h3 style="margin-left:5px;">Nicholas Occhipinti</h3>
+
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end" fxHide.xs>
+      <ul fxLayout fxLayoutGap="20px" class="menu-items">
+        <button  style="color: white;" mat-menu-item [routerLink]="['/projects']">Projects</button>
+        <button  style="color: white;" mat-menu-item [routerLink]="['/resume']">Resume</button>
+      </ul>
+    </div>
+
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end" fxHide.gt-xs>
+      <a class="valign-center" mat-icon-button [matMenuTriggerFor]="menu" aria-label="additional links">
+          <mat-icon>more_vert</mat-icon>
+      </a>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item [routerLink]="['/projects']">Projects</button>
+        <button mat-menu-item [routerLink]="['/resume']">Resume</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+
