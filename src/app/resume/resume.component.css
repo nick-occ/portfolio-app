@@ -1,7 +1,28 @@
 .resume-image {
-height: fit-content;
+  height: fit-content;
+  max-width: 150px; margin-left: auto; margin-right: auto;
 }
 
 #resume_accordian {
   margin: 20px;
+}
+
+.skill_card {
+  min-width: 250px;
+  margin: 10px;
+  background-color: #1a1b1b;
+}
+
+.skill_card h3 {
+  background-color: silver;
+}
+
+.skill_card li {
+  color: whitesmoke;
+}
+
+@media screen and (max-width: 320px) {
+    .button-text {
+        display: none;
+    }
 }

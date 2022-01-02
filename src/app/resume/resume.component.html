@@ -1,6 +1,16 @@
+<div class="d-flex justify-content-xl-end justify-content-sm-center">
+  <a title="Download Resume" target="_blank" class="btn btn-dark" style="text-decoration: none; color: white; margin: 10px;" href="/assets/files/resume/Nicholas%20Occhipinti%20Resume.pdf"><mat-icon style="position: relative; top: 5px; bottom: 5px;" aria-hidden="false" aria-label="Example home icon">download</mat-icon>
+    <span class="button-text">Download Resume</span>
+  </a>
+</div>
+<div>
+  <h1 class="text-center" style="color: white;font-family: monospace">My Resume</h1>
+  <h3 class="text-center" style="color: white;font-family: monospace">Click each section below to expand resume.</h3>
+</div>
+<div style="padding: 0 5%;">
+<mat-accordion id="resume_accordian" multi>
 
-<mat-accordion class="d-flex flex-wrap justify-content-around" id="resume_accordian" multi>
-  <mat-expansion-panel class="w-75" [expanded]="true">
+  <mat-expansion-panel [expanded]="true">
     <mat-expansion-panel-header>
       <mat-panel-title>
         <strong>Experience</strong>
@@ -12,7 +22,7 @@
         <mat-card-content>
           <div class="row align-items-center">
 
-            <img src="{{e.image.imgPath}}" alt="..." class="resume-image col-sm-4 col-lg-2 img-fluid ">
+            <img style="" src="{{e.image.imgPath}}" alt="..." class="resume-image col-sm-4 col-lg-2">
             <div class="col-sm-8 col-lg-10">
               <strong>{{e.name}}</strong> - {{e.location}}
               <br>
@@ -31,7 +41,7 @@
     </div>
 </mat-expansion-panel>
 
-<mat-expansion-panel class="w-75">
+<mat-expansion-panel>
   <mat-expansion-panel-header>
     <mat-panel-title>
       <strong>Education</strong>
@@ -41,8 +51,8 @@
     <mat-card>
       <mat-card-content>
         <div class="row align-items-center">
-          <img src="{{ed.image.imgPath}}" alt="..." class="resume-image col-sm-4 col-lg-2 img-fluid ">
-          <div>
+          <img src="{{ed.image.imgPath}}" alt="..." class="resume-image col-sm-4 col-lg-2 ">
+          <div class="col-sm-8 col-lg-10">
             <strong>{{ed.university}}</strong>, {{ed.location}}
             <br>
             {{ed.degree}} - {{ed.major}}
@@ -56,7 +66,7 @@
   </div>
 </mat-expansion-panel>
 
-<mat-expansion-panel class="w-75">
+<mat-expansion-panel>
   <mat-expansion-panel-header>
     <mat-panel-title>
       <strong>Projects</strong>
@@ -72,5 +82,105 @@
     </mat-card>
   </div>
 </mat-expansion-panel>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <strong>Skills</strong>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div style="display: flex; justify-content: space-around;flex-wrap: wrap">
+  <mat-card class="skill_card">
+    <h3 style="text-align: center"><strong>GIS</strong></h3>
+    <mat-card-content>
+      <ul>
+        <li>ArcGIS
+          <ul>
+            <li>ArcGIS Pro</li>
+            <li>ArcDesktop</li>
+            <li>ArcGIS Server</li>
+            <li>Portal for ArcGIS</li>
+            <li>ArcGIS JavaScript & Python API's</li>
+          </ul>
+        </li>
+        <li>CAD
+           <ul>
+            <li>AutoCAD</li>
+            <li>Revit</li>
+          </ul>
+        </li>
+        <li>Survey
+          <ul>
+            <li>Trimble Survey Equipment</li>
+            <li>ArcGIS Collector</li>
+          </ul>
+        </li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="skill_card">
+    <h3 style="text-align: center"><strong>Data Science</strong></h3>
+    <mat-card-content>
+      <ul>
+        <li>Tableau
+          <ul>
+            <li>Desktop</li>
+            <li>Server</li>
+            <li>Prep</li>
+          </ul>
+        </li>
+        <li>Python
+           <ul>
+            <li>Pandas</li>
+            <li>Scikit Learn</li>
+            <li>Tensorflow</li>
+          </ul>
+        </li>
+        <li>R
+          <ul>
+            <li>Shiny</li>
+            <li>Dplyr</li>
+            <li>ggplot2</li>
+          </ul>
+        </li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="skill_card">
+    <h3 style="text-align: center"><strong>Development</strong></h3>
+    <mat-card-content>
+      <ul>
+        <li>Angular</li>
+        <li>Python</li>
+        <li>JavaScript\TypeScript</li>
+        <li>SQL</li>
+        <li>Source Control
+          <ul>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>SourceTree</li>
+          </ul>
+        </li>
+        <li>Server
+          <ul>
+            <li>NGINX</li>
+            <li>Windows Server</li>
+            <li>Linux</li>
+          </ul>
+        </li>
+        <li>Database
+          <ul>
+            <li>Oracle</li>
+            <li>Postgres\PostGIS</li>
+            <li>MongoDB</li>
+          </ul>
+        </li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+  </div>
+</mat-expansion-panel>
+
 </mat-accordion>
 
+
+</div>
