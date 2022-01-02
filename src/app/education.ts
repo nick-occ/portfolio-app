@@ -1,3 +1,4 @@
+import { DecimalPipe } from '@angular/common';
 import {Image} from './image';
 
 export interface Education {
@@ -6,7 +7,7 @@ export interface Education {
   location: string;
   degree: string;
   major: string;
-  gpa?: number;
+  gpa?: string;
   startDate: string;
   endDate: string;
   image?: Image;

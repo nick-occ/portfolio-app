@@ -4,10 +4,11 @@ export const EDUCATION: Education[] = [{
   id: 1,
   university: 'University of North Carolina at Charlotte',
   location: 'Charlotte, NC',
-  degree: 'Masters\'s Degree',
+  degree: 'Masters Degree',
   major: 'Data Science and Business Analytics',
   startDate: 'September 2020',
-  endDate: 'December 2021 (Expected)',
+  endDate: 'December 2021',
+  gpa: parseFloat("4.0").toFixed(1),
   image: {
     imgId: 1,
     imgPath: 'assets/img/logos/uncc.png'
@@ -20,7 +21,7 @@ export const EDUCATION: Education[] = [{
   major: 'Data Science and Business Analytics',
   startDate: 'January 2019',
   endDate: 'December 2019',
-  gpa: 4.0,
+  gpa: parseFloat("4.0").toFixed(1),
   image: {
     imgId: 1,
     imgPath: 'assets/img/logos/uncc.png'
@@ -33,7 +34,7 @@ export const EDUCATION: Education[] = [{
   major: 'Geographic Information Science',
   startDate: 'January 2012',
   endDate: 'May 2014',
-  gpa: 3.93,
+  gpa: parseFloat("3.93").toFixed(2),
   image: {
     imgId: 2,
     imgPath: 'assets/img/logos/osu.png'
