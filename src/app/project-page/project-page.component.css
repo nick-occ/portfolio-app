@@ -29,7 +29,7 @@ body, html, app-project-page {
   outline: none;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 411px) {
     .button-text {
         display: none;
     }

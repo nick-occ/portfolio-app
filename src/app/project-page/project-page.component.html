@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <section class="row align-items-center">
 
-      <div class="col-lg-6" id="image">
+      <div class="col-xl-6" id="image">
         <h1 class="heading"><b>{{project.name}}</b></h1>
         <h3 class="heading">{{project.caption}}</h3>
         <ngb-carousel class="img-carousel" [interval]="0" >
@@ -11,7 +11,7 @@
         </ngb-carousel>
       </div>
 
-      <div class="col-lg-6" id="desc">
+      <div class="col-xl-6" id="desc">
         <h1 class="heading">Description</h1>
         <p class="content" [innerHTML]="project.desc" style=""></p>
         <br>
@@ -21,11 +21,9 @@
         </ul>
         <div class="d-flex justify-content-around align-items-center">
           <div *ngFor="let l of project.links">
-
               <a title="{{l.name}}" class="btn btn-dark" style="text-decoration: none; color: white; margin: 10px;" href="{{l.url}}"><mat-icon style="position: relative; top: 5px; bottom: 5px;" aria-hidden="false" aria-label="Example home icon">{{l.icon}}</mat-icon>
-                <span class="button-text">{{l.name}}</span>
+                <span class="button-text">  {{l.name}}</span>
               </a>
-
           </div>
         </div>
       </div>
