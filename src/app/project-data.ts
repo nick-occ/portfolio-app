@@ -141,14 +141,35 @@ export const PROJECT: Project[] = [{
   name: 'UNC Charlotte Campus Map',
   caption: 'UNC Charlotte Campus Map Project',
   images: [{
-    imgId: 4,
-    imgPath: 'assets/img/projects/campus-map/campus-map.png',
-    caption: 'UNC Charlotte Campus Map'
+    imgId: 29,
+    imgPath: 'assets/img/projects/campus-map/charlotte-map.png',
+    caption: 'UNC Charlotte Campus Web Map'
+  },{
+    imgId: 30,
+    imgPath: 'assets/img/projects/campus-map/charlotte-directions.png',
+    caption: 'Google Maps Directions'
+  },{
+    imgId: 31,
+    imgPath: 'assets/img/projects/campus-map/uncc-printable-map.png',
+    caption: 'Printable Map Design'
   }],
-  desc: 'Maintain and update UNC Charlotte Campus Map',
-  url: 'https://maps.uncc.edu',
-  skills: [],
-  featured: false
+  desc: 'Maintain the campus web map used by students, employees and visitors to navigate and find buildings, departments or services on campus.'+
+  '  Some layers are linked to APIs to receive real time information such as the location of buses and showing when the next bus will arrive or how many scooter are in a dock.  '+
+  'The map is first created in ArcGIS Pro where the data is stored in an enterprise geodatabase in Oracle. \
+  The map is published out to a map service hosted in ArcGIS Server and the service is then called in the Angular application.  Popular keywords for buildings, restaurants and services are cached in NGINX for a faster response time when searching the map.  Printable maps are also designed in ArcGIS Pro \
+  and used by different departments such as parking maps for Parking and Transportation Services.',
+  url: 'https://maps.charlotte.edu',
+  skills: ['Angular','NGINX','ArcGIS Server', 'ArcGIS Pro'],
+  featured: false,
+  links: [{
+    name: 'Web Map',
+    url: 'https://maps.charlotte.edu',
+    icon: 'link',
+  },{
+    name: 'PDF Map',
+    url: 'https://facilities.charlotte.edu/sites/facilities.charlotte.edu/files/media/Maps/Uncc_Campus_Map.pdf',
+    icon: 'subject',
+  }]
 }, {
   id: 5,
   name: 'NYC Complaint Network Analysis',
@@ -253,14 +274,30 @@ export const PROJECT: Project[] = [{
     imgPath: 'assets/img/projects/internship/work-request-predictions.png',
     caption: 'Predicting work request cost and time to complete.'
   },{
-    imgId: 24,
+    imgId: 28,
     imgPath: 'assets/img/projects/internship/space-management-dashboard.png',
     caption: 'Space Management dashboard.'
   }],
-  desc: 'This project analyzed Twitter data around the release of the Popeyes Chicken Sandwich craze.  There was a range of emotion with the release of the sandwich, from joy about getting the sandwich, anger when they sold out and fear when there was fighting'+
-  'The data was collected from the Twitter Academic Research API and visualization were created in Tableau.  Different analysis techniques were used such as sentiment analysis, topic modeling and word and emoji clouds to show the change in emotion over time.'+
-  'Analysis of hashtags and direct mentions and regression analysis of retweets to see how engage people were with the campaign during different times and network analysis to show the degree centrality about people tweeting about the fights at Popeyes.'
-  ,
+  desc: "The internship is an opportunity to work with Facilities Management (FM) \
+  at the University of North Carolina at Charlotte, analyzing data from their work \
+  management system.  Machine learning can be applied to different areas of their \
+  business in order to improve operations.  Some examples are predicting the cost \
+  and hours for a work request and how that could improve the scheduling of work, \
+  budgeting and providing better estimates to customers.  Using natural language \
+  processing (NLP) to analyze the work request descriptions can improve how work requests \
+  are categorized into problem types and the speed at which they are routed to the \
+  appropriate shops to do the work.  A big part of the work Facilities Management \
+  does involves installing, repairing and maintaining the equipment across campus.  \
+  Analysis can be done to study the lifespan of equipment and see if there are any patterns \
+  of when equipment will break down.  This can help avoid outages and highlight where \
+  additional preventive maintenance scheduling needs to be implemented."+
+  '<br><br>' +
+  'The internship allowed me to apply different tools learned in the Data Science \
+  and Business Analytics program to different areas of Facilities Management operations \
+  and also get more experience working with real world data.  The work management system \
+  generates a large volume of data where important insights can be lost if no one is there \
+  to analyze the data and turn it into knowledge.  This can then help FM make more informed \
+  data driven decisions going forward.',
   links:  [{
     name: 'Report',
     url: 'https://github.com/nick-occ/dsba-6520-project',
