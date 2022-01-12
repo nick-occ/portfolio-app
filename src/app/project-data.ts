@@ -8,32 +8,35 @@ export const PROJECT: Project[] = [{
   images: [{
     imgId: 1,
     imgPath: 'assets/img/projects/opioid/prescriber-rates.PNG',
-    caption: 'Opioid Prescriber Rates'
+    caption: 'Map of the Opioid Prescriber Rates in the US.  The users also has the ability to filter data by clicking on a state and seeing the breakdown of prescriber rates by county.'
   }, {
     imgId: 12,
     imgPath: 'assets/img/projects/opioid/analysis.png',
-    caption: 'Opioid Deaths Analysis'
+    caption: 
+    'Visualization shows the prescriber rates and deaths over time for the selected state compared to the national average. \
+    The bottom visualization is a radar chart show which factors (age, race, drug type) contribute to the most deaths.'
   }, {
     imgId: 13,
     imgPath: 'assets/img/projects/opioid/opioid-deaths.PNG',
-    caption: 'Deaths By Opioid'
+    caption: 'Map of opioid deaths for a selected year across the US grouped by race, age or opioid type and has a corresponding bar chart.'
   }, {
     imgId: 14,
     imgPath: 'assets/img/projects/opioid/opioid-drug-data.PNG',
-    caption: 'Opioid Drug Data'
+    caption: 'Word Cloud of the top drugs that were prescribed which can be filtered by the country or a specific state.'
   }],
   desc:
-    'For the project we wanted to explore data related to opioids, in an effort to better understand and get more insight into ' +
-    'the opioid epidemic.  Our domain problem is one for a researcher wanting to explore the connection between prescriber rates of ' +
-    'opioid prescriptions and opioid related deaths both in the country as a whole and drilling down to the state level.  The first ' +
-    'part we wanted to look at was data on prescribers.  This data would allow the researcher to see the distribution of opioids across ' +
+    'This project explored data related to opioids, in an effort to better understand and get more insight into ' +
+    'the opioid epidemic.  The domain problem was for a researcher wanting to explore the connection between prescriber rates of ' +
+    'opioid prescriptions and opioid related deaths both in the country as a whole and drilling down to the state level.  '+
+    '<br><br>'+
+    'The first part we looked at was data on prescribers.  This data would allow the researcher to see the distribution of opioids across ' +
     'the US and also find the most commonly prescribed opioids.  The second part of the data involved finding information about deaths ' +
     'that occur from opioid overdoses in the United States.  This would also allow the researcher to drill down to the state level.  ' +
-    'Another level of detail that we felt would be an important task for the researcher is to categorize these deaths into different ' +
-    'types of groups such as race and age.  This would add another level of detail and help identify groups that are suffering from ' +
-    'opioid addiction, which would then allow researchers to provide information and where attention needs to be focused the most to ' +
+    'Another level of detail we showed was categorizing these deaths into different ' +
+    'types of groups such as race and age.  This would help identify groups that are suffering from ' +
+    'opioid addiction, and allow researchers to provide information about where issues needs to be addressed the most to ' +
     'combat the opioid epidemic.',
-  skills: ['R', 'Shiny'],
+  skills: ['R', 'Shiny', 'Plotly'],
   featured: true,
   links: [{
     name: 'Opioid Dashboard',
