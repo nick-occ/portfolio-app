@@ -31,9 +31,9 @@
               {{e.startDate}} - {{e.endDate}}
               <br>
               <br>
-              <p>
-                {{e.desc}}
-              </p>
+              <ul *ngFor="let desc of e.desc">
+                <li>{{desc}}</li>
+              </ul>
             </div>
           </div>
         </mat-card-content>

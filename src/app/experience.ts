@@ -7,7 +7,7 @@ export interface Experience {
   role: string;
   startDate: string;
   endDate: string;
-  desc: string;
+  desc: string[];
   image?: Image;
   url?: string;
 }
