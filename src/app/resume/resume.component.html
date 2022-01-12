@@ -75,9 +75,14 @@
   <div *ngFor="let r of resume.resumeProject">
     <mat-card>
       <mat-card-content>
-        <strong>{{r.name}}</strong>
-        <div>{{r.desc}}</div>
-        <a *ngIf="r.url" href="{{r.url}}" target="_blank">{{r.url}}</a>
+        <div>
+          <div><strong>{{r.name}}</strong> </div>
+          <div><strong *ngIf="r.url"> <a href="{{r.url.link}}" target="_blank">{{r.url.name}}</a></strong></div>
+        </div>
+        <br>
+        <ul *ngFor="let desc of r.desc">
+          <li>{{desc}}</li>
+        </ul>
       </mat-card-content>
     </mat-card>
   </div>
