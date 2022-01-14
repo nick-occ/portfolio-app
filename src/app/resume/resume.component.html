@@ -31,8 +31,8 @@
               {{e.startDate}} - {{e.endDate}}
               <br>
               <br>
-              <ul *ngFor="let desc of e.desc">
-                <li>{{desc}}</li>
+              <ul>
+                <li *ngFor="let desc of e.desc">{{desc}}</li>
               </ul>
             </div>
           </div>
@@ -80,8 +80,8 @@
           <div><strong *ngIf="r.url"> <a href="{{r.url.link}}" target="_blank">{{r.url.name}}</a></strong></div>
         </div>
         <br>
-        <ul *ngFor="let desc of r.desc">
-          <li>{{desc}}</li>
+        <ul>
+          <li *ngFor="let desc of r.desc">{{desc}}</li>
         </ul>
       </mat-card-content>
     </mat-card>
