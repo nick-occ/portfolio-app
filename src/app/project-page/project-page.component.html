@@ -13,11 +13,13 @@
 
       <div class="col-xl-6" id="desc">
         <h1 class="heading">Description</h1>
+        <mat-card>
         <p class="content" [innerHTML]="project.desc" style=""></p>
+      </mat-card>
         <br>
         <h1 class="heading">Skills Used</h1>
-        <ul *ngFor="let skill of project.skills">
-          <li class="content" ngStyle="">{{skill}}</li>
+        <ul >
+          <li *ngFor="let skill of project.skills" class="project-skill" ngStyle="">{{skill}}</li>
         </ul>
         <div class="d-flex justify-content-around align-items-center">
           <div *ngFor="let l of project.links">
