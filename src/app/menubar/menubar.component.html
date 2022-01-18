@@ -4,14 +4,14 @@
     </a>
     <h3 style="margin-left:5px;">Nicholas Occhipinti</h3>
 
-    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end" fxHide.sm>
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end" fxHide.xs>
       <ul fxLayout fxLayoutGap="20px" class="menu-items">
-        <button  style="color: white;" mat-menu-item [routerLink]="['/projects']">Projects</button>
-        <button  style="color: white;" mat-menu-item [routerLink]="['/resume']">Resume</button>
+        <mat-button  style="color: white;" mat-menu-item [routerLink]="['/projects']">Projects</mat-button>
+        <mat-button  style="color: white;" mat-menu-item [routerLink]="['/resume']">Resume</mat-button>
       </ul>
     </div>
 
-    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end" fxHide.gt-sm>
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end" fxHide.gt-xs>
       <a class="valign-center" mat-icon-button [matMenuTriggerFor]="menu" aria-label="additional links">
           <mat-icon>more_vert</mat-icon>
       </a>
