@@ -20,9 +20,9 @@
     <div *ngFor="let e of resume.experience">
       <mat-card>
         <mat-card-content>
-          <div class="row align-items-center">
+          <div style="display: flex; flex-direction: column; justify-content: space-around; align-content: center; flex-wrap: wrap;" class="">
 
-            <img style="" src="{{e.image.imgPath}}" alt="..." class="resume-image col-sm-4 col-lg-2">
+            <img style="padding:10px;" src="{{e.image.imgPath}}" alt="..." class="resume-image">
             <div class="col-sm-8 col-lg-10">
               <strong>{{e.name}}</strong> - {{e.location}}
               <br>
