@@ -25,10 +25,16 @@ a:hover, a:active {
 }
 
 mat-toolbar {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0px;
+  /* position: sticky;
+  position: -webkit-sticky; */
+  /* top: 0px; */
   z-index: 999;
   background-color: #000;
   color: white;
+  display: flex;
+  align-items: center;
+}
+
+mat-toolbar a {
+  height: 27px;
 }
