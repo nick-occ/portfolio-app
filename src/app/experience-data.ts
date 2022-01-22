@@ -40,7 +40,7 @@ export const EXPERIENCE: Experience[] = [{
   id: 3,
   name: 'New York City Department of Education',
   location: 'Brooklyn, NY',
-  role: 'Geospatial Developer',
+  role: 'GIS Developer',
   startDate: 'April 2017',
   endDate: 'August 2017',
   desc: [

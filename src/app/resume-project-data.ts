@@ -20,7 +20,7 @@ export const RESUME_PROJECT: ResumeProject[] = [{
   desc:
   ['Used R with the Twitter API to collect tweets about the 2019 Popeye\'s chicken sandwich release.',
   'Developed an emoji cloud in Tableau to capture the range of emotions over time.',
-  'Created dashboards showing sentiment analysis, topic modeling, and change in retweet volume over time.',
+  'Created dashboards showing sentiment analysis, topic modeling, and the change in retweet volume over time.',
   'Performed network analysis to study the centrality of tweets about the fights that occurred at Popeyes.'
 ],
   url:{

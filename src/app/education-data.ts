@@ -4,7 +4,7 @@ export const EDUCATION: Education[] = [{
   id: 1,
   university: 'University of North Carolina at Charlotte',
   location: 'Charlotte, NC',
-  degree: 'Masters Degree',
+  degree: 'Master of Science',
   major: 'Data Science and Business Analytics',
   startDate: 'September 2020',
   endDate: 'December 2021',
