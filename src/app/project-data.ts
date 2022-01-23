@@ -318,11 +318,11 @@ export const PROJECT: Project[] = [{
   additional preventive maintenance scheduling needs to be implemented.",
   links:  [{
     name: 'Report',
-    url: 'https://github.com/nick-occ/dsba-6520-project',
+    url: 'https://docs.google.com/document/d/1b4Smw141Y5FvdKqSvQUsUlueOog77jBcISVSVIUxvNc',
     icon: 'subject'
   },{
     name: 'Presentation',
-    url: 'https://docs.google.com/presentation/d/1GHtUcEAT_oI27WDZd10-nKUjYifM7aslUo03oynh3Os/edit?usp=sharing',
+    url: 'https://docs.google.com/presentation/d/1GHtUcEAT_oI27WDZd10-nKUjYifM7aslUo03oynh3Os',
     icon: 'slideshow'
   }],
   skills: ['Python', 'XGBoost', 'Word2Vec','Deep Learning', 'Tableau'],
