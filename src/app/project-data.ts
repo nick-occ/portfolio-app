@@ -277,7 +277,7 @@ export const PROJECT: Project[] = [{
   featured: false
 },{
   id: 7,
-  name: 'UNC Charlotte Data Sciene Internship',
+  name: 'UNC Charlotte Data Science Internship',
   caption: 'Using machine learning on work request data.',
   images: [{
     imgId: 24,
