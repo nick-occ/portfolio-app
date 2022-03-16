@@ -139,8 +139,8 @@ export const PROJECT: Project[] = [{
     name: 'Project Paper',
     icon: 'subject'
   }, {
-    url: 'assets/files/projects/katrina/katrina-poster.ppt',
-    name: 'Project Powerpoint',
+    url: 'assets/files/projects/katrina/katrina-poster.pdf',
+    name: 'Project Poster',
     icon: 'slideshow'
   }]
 }, {
