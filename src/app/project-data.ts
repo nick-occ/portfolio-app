@@ -224,7 +224,7 @@ export const PROJECT: Project[] = [{
     icon: 'code'
   },{
     name: 'Report',
-    url: 'https://docs.google.com/document/d/1A4qNnQvHEfwIKEsIFu0bxs8qGj-TlSW2nE3T5uT0fOY/edit?usp=sharing',
+    url: 'assets/files/projects/nyc-complaints/DSBA-6520 Final Report.pdf',
     icon: 'subject'
   }],
   skills: ['Neo4J', 'Python', 'ArcGIS'],
