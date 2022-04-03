@@ -124,7 +124,7 @@ export const PROJECT: Project[] = [{
   }, {
     imgId: 8,
     imgPath: 'assets/img/projects/katrina/land-classification-model.jpg',
-    caption: 'Model built in ESRI ModelBuilding to calculate changes of land classification using the pre and post rasters.'
+    caption: 'Model built in ESRI ModelBuilder to calculate changes of land classification using the pre and post rasters.'
   }
   ],
   desc: 'The purpose of this project was to conduct a temporal study that would show how remote sensing technology could be used to assess the impact of Hurricane Katrina and detect growth/rebuilding trends after the hurricane.  \
@@ -142,40 +142,6 @@ export const PROJECT: Project[] = [{
     url: 'assets/files/projects/katrina/katrina-poster.pdf',
     name: 'Project Poster',
     icon: 'slideshow'
-  }]
-}, {
-  id: 4,
-  name: 'UNC Charlotte Campus Map',
-  caption: 'UNC Charlotte Campus Map Project',
-  images: [{
-    imgId: 29,
-    imgPath: 'assets/img/projects/campus-map/charlotte-map.png',
-    caption: 'UNC Charlotte Campus Web Map'
-  },{
-    imgId: 30,
-    imgPath: 'assets/img/projects/campus-map/charlotte-directions.png',
-    caption: 'Google Maps Directions embedded into the campus map.'
-  },{
-    imgId: 31,
-    imgPath: 'assets/img/projects/campus-map/uncc-printable-map.png',
-    caption: 'Printable map design used in kiosks across campus.'
-  }],
-  desc: 'Maintain the campus web map used by students, employees and visitors to help them navigate the campus and find buildings, departments and assets on campus. \
-  Some layers are linked to APIs to receive real time information such as the location of buses, how full the parking decks are, how many scooters are available at each hub and showing when the next bus will arrive. \
-  Maps are created in ArcGIS Pro where the data is stored in an enterprise geodatabase in Oracle. The map is published out to a map service hosted in ArcGIS Server and \
-  the service is then called in the Angular application.  Popular keywords for buildings, restaurants and services are cached in NGINX for a faster response time when searching the map.  \
-  Printable maps are also designed in ArcGIS Pro and used by different departments such as parking maps for Parking and Transportation Services.',
-  url: 'https://maps.charlotte.edu',
-  skills: ['Angular','NGINX','ArcGIS Server', 'ArcGIS Pro'],
-  featured: false,
-  links: [{
-    name: 'Web Map',
-    url: 'https://maps.charlotte.edu',
-    icon: 'link',
-  },{
-    name: 'PDF Map',
-    url: 'https://facilities.charlotte.edu/sites/facilities.charlotte.edu/files/media/Maps/Uncc_Campus_Map.pdf',
-    icon: 'subject',
   }]
 }, {
   id: 5,
@@ -327,4 +293,38 @@ export const PROJECT: Project[] = [{
   }],
   skills: ['Python', 'XGBoost', 'Word2Vec','Deep Learning', 'Tableau'],
   featured: false
+},{
+  id: 8,
+  name: 'UNC Charlotte Campus Map',
+  caption: 'UNC Charlotte Campus Map Project',
+  images: [{
+    imgId: 29,
+    imgPath: 'assets/img/projects/campus-map/charlotte-map.png',
+    caption: 'UNC Charlotte Campus Web Map'
+  },{
+    imgId: 30,
+    imgPath: 'assets/img/projects/campus-map/charlotte-directions.png',
+    caption: 'Google Maps Directions embedded into the campus map.'
+  },{
+    imgId: 31,
+    imgPath: 'assets/img/projects/campus-map/uncc-printable-map.png',
+    caption: 'Printable map design used in kiosks across campus.'
+  }],
+  desc: 'Maintain the campus web map used by students, employees and visitors to help them navigate the campus and find buildings, departments and assets on campus. \
+  Some layers are linked to APIs to receive real time information such as the location of buses, how full the parking decks are, how many scooters are available at each hub and showing when the next bus will arrive. \
+  Maps are created in ArcGIS Pro where the data is stored in an enterprise geodatabase in Oracle. The map is published out to a map service hosted in ArcGIS Server and \
+  the service is then called in the Angular application.  Popular keywords for buildings, restaurants and services are cached in NGINX for a faster response time when searching the map.  \
+  Printable maps are also designed in ArcGIS Pro and used by different departments such as parking maps for Parking and Transportation Services.',
+  url: 'https://maps.charlotte.edu',
+  skills: ['Angular','NGINX','ArcGIS Server', 'ArcGIS Pro'],
+  featured: false,
+  links: [{
+    name: 'Web Map',
+    url: 'https://maps.charlotte.edu',
+    icon: 'link',
+  },{
+    name: 'PDF Map',
+    url: 'https://facilities.charlotte.edu/sites/facilities.charlotte.edu/files/media/Maps/Uncc_Campus_Map.pdf',
+    icon: 'subject',
+  }]
 }];
