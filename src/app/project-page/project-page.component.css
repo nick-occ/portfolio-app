@@ -1,42 +1,57 @@
-body, html, app-project-page {
-  height: 100%;
+.project-page {
+  padding: 20px;
 }
 
-#cont {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  align-items: start;
 }
 
-#image_img {
+.project-images,
+.project-details {
   width: 100%;
 }
 
-.carousel-indicators > li {
-  background-color: red;
+.project-skills {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-skills li {
+  background-color: #f0f0f0;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #212121;
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #424242;
 }
 
 .heading {
   color: white;
-  /*font-weight: bold;*/
-}
-
-.content {
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-}
-
-.project-skill {
-  color: cornsilk;
-}
-
-.img-carousel {
-  outline: none;
-}
-
-@media screen and (max-width: 411px) {
-    .button-text {
-        display: none;
-    }
 }
