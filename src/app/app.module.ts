@@ -1,9 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser'; 
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MenubarComponent } from './menubar/menubar.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
@@ -15,11 +14,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ResumeComponent } from './resume/resume.component';
 
 import { RouterModule, Routes } from '@angular/router';
-import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 import { HomeComponent } from './home/home.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProjectComponent } from './project/project.component';
 import { ProjectPageComponent } from './project-page/project-page.component';
 import {FormsModule} from '@angular/forms';
@@ -47,14 +44,11 @@ const routes: Routes = [
     imports: [
         BrowserModule,
         RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'}),
-        BrowserAnimationsModule,
         MatToolbarModule,
         MatIconModule,
-        FlexLayoutModule,
         MatMenuModule,
         MatCardModule,
         MatExpansionModule,
-        NgbModule,
         FormsModule
     ],
   providers: [],
