@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {PortfolioService} from '../portfolio.service';
 import {Project} from '../project';
 @Component({
-  selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+    selector: 'app-projects',
+    templateUrl: './projects.component.html',
+    styleUrls: ['./projects.component.css'],
+    standalone: false
 })
 export class ProjectsComponent implements OnInit {
 

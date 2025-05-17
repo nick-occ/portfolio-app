@@ -6,9 +6,10 @@ import {Project} from '../project';
 import {Image} from '../image';
 
 @Component({
-  selector: 'app-project-page',
-  templateUrl: './project-page.component.html',
-  styleUrls: ['./project-page.component.css']
+    selector: 'app-project-page',
+    templateUrl: './project-page.component.html',
+    styleUrls: ['./project-page.component.css'],
+    standalone: false
 })
 export class ProjectPageComponent implements OnInit {
 

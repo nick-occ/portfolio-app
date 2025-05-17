@@ -3,9 +3,10 @@ import {Resume} from '../resume';
 import {PortfolioService} from '../portfolio.service';
 
 @Component({
-  selector: 'app-resume',
-  templateUrl: './resume.component.html',
-  styleUrls: ['./resume.component.css']
+    selector: 'app-resume',
+    templateUrl: './resume.component.html',
+    styleUrls: ['./resume.component.css'],
+    standalone: false
 })
 export class ResumeComponent implements OnInit {
   resume: Resume;
