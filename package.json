@@ -18,7 +18,7 @@
     "@angular/core": "~19.2.11",
     "@angular/forms": "~19.2.11",
     "@angular/localize": "~19.2.11",
-    "@angular/material": "^11.0.3",
+    "@angular/material": "^19.2.16",
     "@angular/platform-browser": "~19.2.11",
     "@angular/platform-browser-dynamic": "~19.2.11",
     "@angular/router": "~19.2.11",
@@ -31,7 +31,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.1002.1",
     "@angular/cli": "^19.2.12",
-    "@angular/compiler-cli": "~19.2.11",
+    "@angular/compiler-cli": "^19.2.11",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^0.0.28",
