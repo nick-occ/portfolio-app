@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import {PortfolioService} from '../portfolio.service';
 import {Project} from '../project';
+import { ProjectComponent } from '../project/project.component';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.css'],
+    standalone: true,
+    imports: [CommonModule,ProjectComponent]
 })
 export class HomeComponent implements OnInit {
 

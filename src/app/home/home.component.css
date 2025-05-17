@@ -22,3 +22,10 @@ mat-card {
   min-width: 300px;
   margin: 20px;
 }
+
+.projectContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

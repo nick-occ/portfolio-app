@@ -1,33 +1,46 @@
-<div class="container-fluid">
-  <section class="row align-items-center">
+<div class="project-page">
+  <div class="project-grid">
+    <!-- Left Side: Image Carousel + Title -->
+    <div class="project-images">
+      <h1 class="heading"><b>{{ project.name }}</b></h1>
+      <h3 class="heading">{{ project.caption }}</h3>
 
-      <div class="col-xl-6" id="image">
-        <h1 class="heading"><b>{{project.name}}</b></h1>
-        <h3 class="heading">{{project.caption}}</h3>
-        <ngb-carousel class="img-carousel" [interval]="0" >
-          <ng-template ngbSlide *ngFor="let img of project.images; index as i">
-            <app-project-page-image class="heading" [currentImage]="img"></app-project-page-image>
-          </ng-template>
-        </ngb-carousel>
-      </div>
+      <ngb-carousel>
+        <ng-template ngbSlide *ngFor="let img of project.images">
+            <p>imgId: {{ img.imgId }}</p>
+          <app-project-page-image [currentImage]="img"></app-project-page-image>
+        </ng-template>
+      </ngb-carousel>
+    </div>
 
-      <div class="col-xl-6" id="desc">
-        <h1 class="heading">Description</h1>
-        <mat-card>
-        <p class="content" [innerHTML]="project.desc" ></p>
+    <!-- Right Side: Description + Skills + Links -->
+    <div class="project-details">
+      <h1 class="heading">Description</h1>
+      <mat-card>
+        <p class="content" [innerHTML]="project.desc"></p>
       </mat-card>
-        <br>
-        <h1 class="heading">Skills Used</h1>
-        <ul >
-          <li *ngFor="let skill of project.skills" class="project-skill" ngStyle="">{{skill}}</li>
-        </ul>
-        <div class="d-flex justify-content-around align-items-center">
-          <div *ngFor="let l of project.links">
-              <a title="{{l.name}}" class="btn btn-dark" style="text-decoration: none; color: white; margin: 10px;" href="{{l.url}}" target="_blank"><mat-icon style="position: relative; top: 5px; bottom: 5px;" aria-hidden="false" aria-label="Example home icon">{{l.icon}}</mat-icon>
-                <span class="button-text">  {{l.name}}</span>
-              </a>
-          </div>
-        </div>
+
+      <br />
+
+      <h1 class="heading">Skills Used</h1>
+      <ul class="project-skills">
+        <li *ngFor="let skill of project.skills">{{ skill }}</li>
+      </ul>
+
+      <div class="project-links">
+        <a
+          *ngFor="let l of project.links"
+          class="project-link"
+          [href]="l.url"
+          target="_blank"
+          [title]="l.name"
+        >
+          <mat-icon aria-hidden="false" aria-label="{{ l.name }}">
+            {{ l.icon }}
+          </mat-icon>
+          <span class="button-text">{{ l.name }}</span>
+        </a>
       </div>
-  </section>
+    </div>
   </div>
+</div>

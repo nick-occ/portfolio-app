@@ -1,24 +1,28 @@
-  <mat-toolbar fxLayout="row">
-    <a [routerLink]="['']">
-        <mat-icon style="color: white;">home</mat-icon>
+<mat-toolbar color="primary" class="main-toolbar">
+
+  <!-- Left: Home icon and name -->
+  <div class="toolbar-left">
+    <a [routerLink]="['']" class="home-icon">
+      <mat-icon>home</mat-icon>
     </a>
-    <h3 style="margin-left:5px;">Nicholas Occhipinti</h3>
+    <h3 class="name">Nicholas Occhipinti</h3>
+  </div>
 
-    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end" fxHide.xs>
-      <ul fxLayout fxLayoutGap="20px" class="menu-items">
-        <mat-button  style="color: white;" mat-menu-item [routerLink]="['/projects']">Projects</mat-button>
-        <mat-button  style="color: white;" mat-menu-item [routerLink]="['/resume']">Resume</mat-button>
-      </ul>
-    </div>
+  <!-- Right (Desktop) -->
+  <div class="toolbar-right desktop-only">
+    <a mat-button routerLink="/projects" style="color: white;">Projects</a>
+    <a mat-button routerLink="/resume" style="color: white;">Resume</a>
+  </div>
 
-    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end" fxHide.gt-xs>
-      <a class="valign-center" mat-icon-button [matMenuTriggerFor]="menu" aria-label="additional links">
-          <mat-icon>more_vert</mat-icon>
-      </a>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item [routerLink]="['/projects']">Projects</button>
-        <button mat-menu-item [routerLink]="['/resume']">Resume</button>
-      </mat-menu>
-    </div>
-  </mat-toolbar>
+  <!-- Right (Mobile) -->
+  <div class="toolbar-right mobile-only">
+    <button class="ellipsis-button" mat-icon-button [matMenuTriggerFor]="menu" aria-label="More">
+      <mat-icon class="ellipsis">more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/projects">Projects</button>
+      <button mat-menu-item routerLink="/resume">Resume</button>
+    </mat-menu>
+  </div>
 
+</mat-toolbar>

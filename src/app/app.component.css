@@ -21,7 +21,7 @@ a:hover {
 }
 
 .main {
-  background-image: url("src/assets/img/pexels-life-of-pix-8892.jpg");
+  background-image: url("src/assets/img/background3.png");
   background-size: cover;
   flex: 1 0 auto;
   min-height: auto;

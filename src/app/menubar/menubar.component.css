@@ -38,3 +38,61 @@ mat-toolbar {
 mat-toolbar a {
   height: 27px;
 }
+
+.main-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.home-icon {
+  color: white;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.name {
+  color: white;
+  margin: 0;
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ellipsis-button {
+  background-color: black;
+  border: none;
+}
+
+.ellipsis {
+  color: white;
+  background-color: black;
+}
+
+/* Responsive visibility */
+.desktop-only {
+  display: flex;
+}
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: flex;
+  }
+}
