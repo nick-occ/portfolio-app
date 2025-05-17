@@ -30,7 +30,7 @@
       <div *ngFor="let e of resume.experience" class="resume-entry">
         <mat-card>
           <mat-card-content class="resume-content">
-            <img [src]="e.image.imgPath" [alt]="e.name" class="resume-image" />
+            <img [src]="e.image.imgPath" [alt]="e.name" class="resume-image"/>
             <div class="resume-text">
               <strong>{{ e.name }}</strong> - {{ e.location }}<br />
               <strong>{{ e.role }}</strong><br />

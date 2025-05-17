@@ -1,5 +1,12 @@
 .heading {
   color: white;
+  font-family: monospace; 
+  font-weight: bold;
+  font-size: x-large;
+  text-shadow:
+    0 0 5px #007ad1,
+    0 0 10px #007ad1,
+    0 0 15px #007ad1;
 }
 
 mat-card {

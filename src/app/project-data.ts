@@ -323,8 +323,8 @@ export const PROJECT: Project[] = [{
     url: 'https://maps.charlotte.edu',
     icon: 'link',
   },{
-    name: 'PDF Map',
-    url: 'https://facilities.charlotte.edu/sites/facilities.charlotte.edu/files/media/Maps/Uncc_Campus_Map.pdf',
+    name: 'PDF Maps',
+    url: 'https://facilities.charlotte.edu/our-services/maps/printable-campus-maps/',
     icon: 'subject',
   }]
 }];

@@ -17,7 +17,7 @@ export const EXPERIENCE: Experience[] = [{
   ],
   image: {
     imgId: 1,
-    imgPath: 'assets/img/logos/uncc.png'
+    imgPath: 'assets/img/logos/uncc-new.png'
   }
 }, {
   id: 2,
@@ -34,7 +34,7 @@ export const EXPERIENCE: Experience[] = [{
   ],
   image: {
     imgId: 1,
-    imgPath: 'assets/img/logos/uncc.png'
+    imgPath: 'assets/img/logos/uncc-new.png'
   }
 }, {
   id: 3,
