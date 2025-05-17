@@ -4,8 +4,9 @@
       <div class="col-xl-6" id="image">
         <h1 class="heading"><b>{{project.name}}</b></h1>
         <h3 class="heading">{{project.caption}}</h3>
-        <ngb-carousel class="img-carousel" [interval]="0" >
-          <ng-template ngbSlide *ngFor="let img of project.images; index as i">
+        
+        <ngb-carousel *ngIf="project?.images?.length">
+          <ng-template swiperSlide *ngFor="let img of project.images; index as i">
             <app-project-page-image class="heading" [currentImage]="img"></app-project-page-image>
           </ng-template>
         </ngb-carousel>

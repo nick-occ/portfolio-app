@@ -5,11 +5,15 @@ import { PortfolioService } from '../portfolio.service';
 import {Project} from '../project';
 import {Image} from '../image';
 
+import { MatCardModule } from '@angular/material/card';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
 @Component({
     selector: 'app-project-page',
     templateUrl: './project-page.component.html',
     styleUrls: ['./project-page.component.css'],
-    standalone: false
+    imports:[MatCardModule, NgbModule]
 })
 export class ProjectPageComponent implements OnInit {
 

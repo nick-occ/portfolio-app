@@ -21,10 +21,14 @@
     "@angular/platform-browser": "~19.2.11",
     "@angular/platform-browser-dynamic": "~19.2.11",
     "@angular/router": "~19.2.11",
+    "@ng-bootstrap/ng-bootstrap": "^18.0.0",
+    "@popperjs/core": "^2.11.8",
+    "@types/swiper": "^5.4.3",
     "bootstrap": "^5.3.6",
     "rxjs": "~6.6.0",
+    "swiper": "^11.2.6",
     "tslib": "^2.8.1",
-    "zone.js": "~0.15.0"
+    "zone.js": "^0.15.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.2.12",

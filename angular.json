@@ -20,9 +20,14 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "node_modules/swiper/swiper-bundle.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "polyfills": [
+              "zone.js",
+              "@angular/localize/init"
+            ]
           },
           "configurations": {
             "production": {
@@ -64,7 +69,10 @@
               "node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "polyfills": [
+              "@angular/localize/init"
+            ]
           }
         },
         "extract-i18n": {
