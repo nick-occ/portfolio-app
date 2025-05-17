@@ -1,28 +1,71 @@
+.resume-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .resume-header {
+    justify-content: center;
+  }
+}
+
+.resume-download {
+  display: inline-flex;
+  align-items: center;
+  background-color: #212121;
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.resume-download:hover {
+  background-color: #424242;
+}
+
+.resume-title {
+  text-align: center;
+  font-family: monospace;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.resume-wrapper {
+  padding: 0 5%;
+}
+
+.resume-entry {
+  margin: 1rem 0;
+}
+
+.resume-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
 .resume-image {
-  /* height: fit-content; */
-  max-width: 150px; margin-left: auto; margin-right: auto;
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  padding: 10px;
 }
 
-#resume_accordian {
-  margin: 20px;
+.resume-text {
+  flex: 1;
+  min-width: 200px;
 }
 
-.skill_card {
-  min-width: 250px;
-  margin: 10px;
-  background-color: #1a1b1b;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
 }
 
-.skill_card h3 {
-  background-color: silver;
-}
-
-.skill_card li {
-  color: whitesmoke;
-}
-
-@media screen and (max-width: 320px) {
-    .button-text {
-        display: none;
-    }
+.skill-card {
+  padding: 1rem;
 }
