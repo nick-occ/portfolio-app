@@ -327,4 +327,71 @@ export const PROJECT: Project[] = [{
     url: 'https://facilities.charlotte.edu/our-services/maps/printable-campus-maps/',
     icon: 'subject',
   }]
+},
+{
+  id: 9,
+  name: 'Entity Resolution Process',
+  caption:'Using record linkage to identify people across datasets using their names and birth dates.',
+  images: [{
+    imgId: 32,
+    imgPath: 'assets/img/projects/record-linkage/record-linkage-process.png',
+    caption: 'Visualization summarizing the different steps to link people across datasets.'
+  },{
+    imgId: 33,
+    imgPath: 'assets/img/projects/record-linkage/predictions-match-score.png',
+    caption: 'Visualization showing how many records were predicted as matches and non matches by the calculated match score.'
+  },{
+    imgId: 34,
+    imgPath: 'assets/img/projects/record-linkage/match-results.png',
+    caption: 'Table showing the results of people that were matched between the two datasets.  The names, match scores and what\
+     modification was done to the record in order to test the matching is included.'
+  }],
+  desc: "This is a process I developed to link people across different datasets using primarily the persons name and birthdate.  The first step was creating a \
+  dataset of fake names using the Python library <b>faker</b>, randomly assigned dates of births and assigning a random address in Mecklenburg \
+  County to a person.  A gender was also assigned based on the fake name that was generated and <b>Bayesian Improved Surname Geocoding</b> was used to assign a race to \
+  the person based on the fake surname that was generated.  \
+  <br><br> \
+  From this dataset a subset records were created where different changes were made to a \
+  persons names such as removing characters, adding hyphenated last names, modifying the middle names and also creating twins where there is a similar person \
+  with the same last name and birth date and the difference between the first name was one letter.  Extra samples were also added to the subset \
+  to assess how well the record linkage process doesn't get matched with these records.  A unique key common to both datasets was created in order to assess the \
+  performance and was not used in determining matches.\
+  <br><br>\
+  With the datasets created there are 5 major steps in the process.  The first is preprocessing the data where all names \
+  are converted to lowercase so everything is matched on a common case.  The persons race and gender are also used in the linkage process \
+  so they are converted to a standard naming conventions so if one dataset has female as 'F' and the other has it mapped as 'Woman' they will \
+  both get mapped as to a standard naming convention such as 'Female'.  For hyphenated names if one data source has a hyphenated name another data \
+  source may only have one part of the name in their records. The hyphenated version is kept but new records are created for each part of the name. Whitespace \
+  and special characters are removed from the name fields and a phonetic encoding algorithm called <b>Soundex</b> is used which creates a four characters code \
+  that indexes names based on how are they pronounced.  The idea is that if there are names with minor differences they will generate the same code \
+  and can be used to help find matches.\
+  <br><br>\
+  The next step is indexing, which narrows down the records that are potentially matches using a subset of the fields.  This is done because analyzing \
+  all combinations of records between the two datasets is computationally expensive. Two indexes are created using a combinations of the Soundex first and last names \
+  and the birth dates.  Birth dates must match exactly but the Soundex names do not have to match perfectly so we can still find potential matches even with slight \
+  misspellings in the first or last names.\
+  <br><br>\
+  The candidate pairs generated from the indexing step are used in comparison step to compare all the available fields common to both datasets. Based on the fields \
+  they will go through a string similarity algorithm or exact matching and also use the Soundex encodings as part the comparison.  Fields also have a weight associated \
+  with them since fields such as the first and last name would be more important to finding a match.  After the comparison step a binary table is created with every field \
+  used in the comparison where 1 indicates the field matched and 0 indicates it did not.\
+  <br><br>\
+  A <b>Random Forest classification</b> model is created that was trained on a binary comparison table and is used to make predictions if the record is a match (1) or not a \
+  match (0).  A match score is also calculated use the result in the binary table as well as the weight associated with the field.  The combination of match scores \
+  predictions can be used in the evaluation step to create a visualization showing how match scores and predictions vary and determine the threshold to use when \
+  classifying candidates as matches.\
+  <br><br>\
+  The final step is the postprocessing step where there deduplication is done to eliminate cases where a key from one datasource is matched with two or more keys \
+  from the other data sources.  Based on the matches scores of the duplicates, the records are either dropped so the highest scoring match is kept or both keys are \
+  treated as the same person if they have the same match score.  Randomly generated ids are created where each id represents a unique person.  This id is provided \
+  to researchers in place of the original id provided in the dataset in order to prevent re-identification.",
+  url: "",
+  skills: ['Python','Pandas','Polars','Random Forest Classification'],
+  featured: false,
+  links:[{
+    name: 'Record Linkage Demo',
+    url: 'https://github.com/nick-occ/record-linkage/blob/main/record_linkage_demo.ipynb',
+    icon: 'link'
+
+  }]
 }];
