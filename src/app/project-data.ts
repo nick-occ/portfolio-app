@@ -335,11 +335,11 @@ export const PROJECT: Project[] = [{
   images: [{
     imgId: 32,
     imgPath: 'assets/img/projects/record-linkage/predictions-match-score.png',
-    caption: 'Visualization summarizing the different steps to link people across datasets.'
+    caption: 'Visualization showing how many records were predicted as matches and non matches by the calculated match score.'
   },{
     imgId: 33,
     imgPath: 'assets/img/projects/record-linkage/record-linkage-process.png',
-    caption: 'Visualization showing how many records were predicted as matches and non matches by the calculated match score.'
+    caption: 'Visualization summarizing the different steps to link people across datasets.'
   },{
     imgId: 34,
     imgPath: 'assets/img/projects/record-linkage/match-results.png',
