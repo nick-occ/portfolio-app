@@ -334,11 +334,11 @@ export const PROJECT: Project[] = [{
   caption:'Using record linkage to identify people across datasets using their names and birth dates.',
   images: [{
     imgId: 32,
-    imgPath: 'assets/img/projects/record-linkage/record-linkage-process.png',
+    imgPath: 'assets/img/projects/record-linkage/predictions-match-score.png',
     caption: 'Visualization summarizing the different steps to link people across datasets.'
   },{
     imgId: 33,
-    imgPath: 'assets/img/projects/record-linkage/predictions-match-score.png',
+    imgPath: 'assets/img/projects/record-linkage/record-linkage-process.png',
     caption: 'Visualization showing how many records were predicted as matches and non matches by the calculated match score.'
   },{
     imgId: 34,
@@ -347,11 +347,11 @@ export const PROJECT: Project[] = [{
      modification was done to the record in order to test the matching is included.'
   }],
   desc: "This is a process I developed to link people across different datasets using primarily the persons name and birthdate.  The first step was creating a \
-  dataset of fake names using the Python library <b>faker</b>, randomly assigned dates of births and assigning a random address in Mecklenburg \
+  dataset of fake names using the Python library <b>faker</b>, randomly generating birth dates and assigning a random address in Mecklenburg \
   County to a person.  A gender was also assigned based on the fake name that was generated and <b>Bayesian Improved Surname Geocoding</b> was used to assign a race to \
   the person based on the fake surname that was generated.  \
   <br><br> \
-  From this dataset a subset records were created where different changes were made to a \
+  From this dataset a subset of records were created where different changes were made to a \
   persons names such as removing characters, adding hyphenated last names, modifying the middle names and also creating twins where there is a similar person \
   with the same last name and birth date and the difference between the first name was one letter.  Extra samples were also added to the subset \
   to assess how well the record linkage process doesn't get matched with these records.  A unique key common to both datasets was created in order to assess the \
@@ -359,10 +359,10 @@ export const PROJECT: Project[] = [{
   <br><br>\
   With the datasets created there are 5 major steps in the process.  The first is preprocessing the data where all names \
   are converted to lowercase so everything is matched on a common case.  The persons race and gender are also used in the linkage process \
-  so they are converted to a standard naming conventions so if one dataset has female as 'F' and the other has it mapped as 'Woman' they will \
+  so they are converted to standard naming conventions so if one dataset has female as 'F' and the other has it mapped as 'Woman' they will \
   both get mapped as to a standard naming convention such as 'Female'.  For hyphenated names if one data source has a hyphenated name another data \
   source may only have one part of the name in their records. The hyphenated version is kept but new records are created for each part of the name. Whitespace \
-  and special characters are removed from the name fields and a phonetic encoding algorithm called <b>Soundex</b> is used which creates a four characters code \
+  and special characters are removed from the name fields and a phonetic encoding algorithm called <b>Soundex</b> is used which creates a four character code \
   that indexes names based on how are they pronounced.  The idea is that if there are names with minor differences they will generate the same code \
   and can be used to help find matches.\
   <br><br>\
@@ -377,11 +377,11 @@ export const PROJECT: Project[] = [{
   used in the comparison where 1 indicates the field matched and 0 indicates it did not.\
   <br><br>\
   A <b>Random Forest classification</b> model is created that was trained on a binary comparison table and is used to make predictions if the record is a match (1) or not a \
-  match (0).  A match score is also calculated use the result in the binary table as well as the weight associated with the field.  The combination of match scores \
-  predictions can be used in the evaluation step to create a visualization showing how match scores and predictions vary and determine the threshold to use when \
-  classifying candidates as matches.\
+  match (0).  A match score is also calculated using the results in the binary table and the weight associated with the field.  The combination of match scores and \
+  predictions can be used in the evaluation step to create a visualization showing how the number of records that are predicted as matches vary by match score.  The visualization \
+  can then be used to determine the threshold that will be set when classifying candidates as matches.\
   <br><br>\
-  The final step is the postprocessing step where there deduplication is done to eliminate cases where a key from one datasource is matched with two or more keys \
+  The final step is the postprocessing step where deduplication is done to eliminate cases where a key from one datasource is matched with two or more keys \
   from the other data sources.  Based on the matches scores of the duplicates, the records are either dropped so the highest scoring match is kept or both keys are \
   treated as the same person if they have the same match score.  Randomly generated ids are created where each id represents a unique person.  This id is provided \
   to researchers in place of the original id provided in the dataset in order to prevent re-identification.",
