@@ -395,7 +395,7 @@ export const PROJECT: Project[] = [{
 
   }]
 },{
-  id: 9,
+  id: 10,
   name: 'Regional Explorer Web Map',
   caption:"Web mapping application to explore relationships and patterns over time covering categories such a demographics, economy \
   and education variables in the Carolinas.",
