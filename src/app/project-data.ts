@@ -394,4 +394,46 @@ export const PROJECT: Project[] = [{
     icon: 'link'
 
   }]
+},{
+  id: 9,
+  name: 'Regional Explorer Web Map',
+  caption:"Web mapping application to explore relationships and patterns over time covering categories such a demographics, economy \
+  and education variables in the Carolinas.",
+  images: [{
+    imgId: 35,
+    imgPath: 'assets/img/projects/regional-explorer/regional-explorer.png',
+    caption: "Regional map explorer used to show different indicator values across different categories to study how the 14 county region supported by UNC Charlotte's Urban Institute has changed."
+  },{
+    imgId: 36,
+    imgPath: 'assets/img/projects/regional-explorer/bivariate-correlation.png',
+    caption: 'Bivariate choropleth map showing how two variables are correlated.'
+  },{
+    imgId: 37,
+    imgPath: 'assets/img/projects/regional-explorer/spatial-autocorrelation.png',
+    caption: "Spatial analysis to find clusters using local Moran's I statistical measure."
+  }],
+  desc: "Created a web mapping application developed in <b>Angular</b> that uses a hosted feature \
+  layer in <b>ArcGIS Online</b> and the <b>ArcGIS JavaScript API</b> to create web map components and tools. \
+  This project was developed as a way to provide indicators covering different categories such \
+  as demographic, economic and education variables to show how different areas in the region are \
+  changing over time. \
+  <br><br>\
+  The areas shown are Census Tracts covering the 14 county region supported by UNC Charlotte’s \
+  Urban Institute.  The vision is that this tool can be used by the community, researchers and \
+  decision makers to study the growth of the region..  Analysis tools are included to study \
+  the correlation between two indicators and Moran's I to study spatial clustering.",
+  url: "https://regionalexplorer.netlify.app/",
+  skills: ['Angular','TypeScript','ArcGIS Online', 'ArcGIS JavaScript API'],
+  featured: false,
+  links:[{
+    name: 'Regional Explorer Web Map',
+    url: 'https://regionalexplorer.netlify.app/',
+    icon: 'link'
+
+  },{
+    name: 'Angular Mapping Application',
+    url: 'https://github.com/ui-analytics/ui-map-app',
+    icon: 'code'
+
+  }]
 }];
