@@ -33,6 +33,7 @@ export class ProjectPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProject();
+    window.scrollTo(0,0);
   }
 
   getProject(): void {
