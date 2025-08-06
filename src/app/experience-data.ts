@@ -1,13 +1,30 @@
 
 import {Experience} from './experience';
 
-export const EXPERIENCE: Experience[] = [{
-  id: 1,
+export const EXPERIENCE: Experience[] = [
+  {id: 1,
+  name: 'University of North Carolina at Charlotte',
+  location: 'Charlotte, NC',
+  role: 'Data Scientist',
+  startDate: 'June 2021',
+  endDate: 'Present',
+  desc: [
+  "Work on the Charlotte Regional Data Trust where I securely integrate individual‐level administrative data across agencies in the Charlotte–Mecklenburg region. By linking records through a robust, privacy‐preserving system, the Data Trust is able to repurpose administrative data for research, evaluation, and planning.",
+  "Co-authored the inaugural State of Our Data report which highlights different statistics and visualizations about people in the Charlotte-Mecklenburg region that are in the data we maintain. Given that much of the data reflects marginalized or underserved communities, the report aims to equip changemakers with the tools, systems, and insights needed to address regional social, economic, and environmental challenges.",
+  "Developed an entity resolution process that links individuals across datasets using names and birthdates, enhanced with demographic information. Created with a synthetic dataset containing fake names, birthdates, addresses, gender, and race (assigned via Bayesian Improved Surname Geocoding). Variations and noise (e.g., name misspellings, twins) are introduced to simulate real-world inconsistencies. The matching process involves five key steps: preprocessing (standardizing formats, removing noise, and applying Soundex phonetic encoding), indexing (narrowing candidates using birthdate and Soundex name codes), comparing candidate pairs (using string similarity and field weights), classifying matches with a Random Forest model, and deduplicating matches and assigning anonymized IDs.",
+  "Created an Airflow orchestration pipeline that processes data deposits from over 12 partners, handling various formats and cleanliness levels by unzipping files, converting them to CSV, designing database schemas and loading the data into a database. It includes automated data cleaning based on field and deposit types, record comparison for inserts or updates, and comprehensive logging for error tracking. The process will also generate stats for every field which feeds into visualization database tables used in AWS Quicksight dashboards.",
+  "Built a web mapping application in Angular that leverages the ArcGIS JavaScript API and hosted feature layers from ArcGIS Online to visualize regional trends. The tool presents indicators across demographic, economic, and educational categories at the Census Tract level for a 14-county region supported by UNC Charlotte’s Urban Institute. Designed for use by community members, researchers, and decision-makers, it enables users to explore how areas are changing over time. Built-in analysis tools include correlation analysis between indicators and Moran’s I to identify spatial clustering patterns."
+  ],
+  image: {
+    imgId: 1,
+    imgPath: 'assets/img/logos/uncc-new.png'
+  }},
+  {id: 2,
   name: 'University of North Carolina at Charlotte',
   location: 'Charlotte, NC',
   role: 'GIS Developer',
   startDate: 'November 2017',
-  endDate: 'Present',
+  endDate: 'June 2021',
   desc: [
   'Administer ArcGIS Server, Portal and NGINX servers hosting mapping applications to support Facilities Management operations.',
   'Maintain the Campus’ web map application used by students, staff and visitors to find buildings and services on campus.',
@@ -20,7 +37,7 @@ export const EXPERIENCE: Experience[] = [{
     imgPath: 'assets/img/logos/uncc-new.png'
   }
 }, {
-  id: 2,
+  id: 3,
   name: 'University of North Carolina at Charlotte',
   location: 'Charlotte, NC',
   role: 'Data Science Intern',
@@ -37,7 +54,7 @@ export const EXPERIENCE: Experience[] = [{
     imgPath: 'assets/img/logos/uncc-new.png'
   }
 }, {
-  id: 3,
+  id: 4,
   name: 'New York City Department of Education',
   location: 'Brooklyn, NY',
   role: 'GIS Developer',
@@ -55,7 +72,7 @@ export const EXPERIENCE: Experience[] = [{
     imgPath: 'assets/img/logos/nycdoe.png'
   }
 }, {
-  id: 4,
+  id: 5,
   name: 'Mott MacDonald',
   location: 'Iselin, NJ',
   role: 'GIS Specialist',
@@ -73,7 +90,7 @@ export const EXPERIENCE: Experience[] = [{
     imgPath: 'assets/img/logos/mott-mac.png'
   }
 }, {
-  id: 5,
+  id: 6,
   name: 'Rutgers University',
   location: 'Newark, NJ',
   role: 'Assistant Professor',
@@ -89,7 +106,7 @@ export const EXPERIENCE: Experience[] = [{
     imgPath: 'assets/img/logos/rutgers.jpg'
   }
 }, {
-  id: 5,
+  id: 7,
   name: 'Essex County College',
   location: 'Newark, NJ',
   role: 'Assistant Professor',
@@ -101,7 +118,7 @@ export const EXPERIENCE: Experience[] = [{
     imgPath: 'assets/img/logos/essex-county-college.jpg'
   }
 }, {
-  id: 6,
+  id: 8,
   name: 'Union County NJ - Bureau of GIS',
   location: 'Elizabeth, NJ',
   role: 'GIS Technician',
