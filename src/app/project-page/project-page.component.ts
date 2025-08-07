@@ -10,7 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProjectPageImageComponent } from '../project-page-image/project-page-image.component'
-
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-project-page',
@@ -28,7 +28,8 @@ export class ProjectPageComponent implements OnInit, AfterViewInit {
   constructor(
     private route: ActivatedRoute,
     private portfolioService: PortfolioService,
-    private location: Location
+    private location: Location,
+    private sanitizer: DomSanitizer
   ) { }
 
   ngOnInit(): void {
@@ -47,5 +48,21 @@ export class ProjectPageComponent implements OnInit, AfterViewInit {
       console.log(project)
     });
   }
+
+  getSafeDesc(desc: string): SafeHtml {
+    if (!desc) return '';
+    const doc = new DOMParser().parseFromString(desc, 'text/html');
+
+    // Remove anchors that cause scrolling
+    doc.querySelectorAll('a[href^="#"]').forEach(a => a.removeAttribute('href'));
+
+    // Remove autofocus
+    doc.querySelectorAll('[autofocus]').forEach(el => el.removeAttribute('autofocus'));
+
+    // Optionally strip heading IDs
+    doc.querySelectorAll('h1[id],h2[id],h3[id]').forEach(h => h.removeAttribute('id'));
+
+    return this.sanitizer.bypassSecurityTrustHtml(doc.body.innerHTML);
+}
 
 }
