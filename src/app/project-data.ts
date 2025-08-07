@@ -436,4 +436,60 @@ export const PROJECT: Project[] = [{
     icon: 'code'
 
   }]
+},{
+  id: 11,
+  name: 'State of Our Data Report',
+  caption:"Report equipping changemakers with trusted data and insights to transform the Urban Institute's 14-county region.",
+  images: [
+  {
+    imgId: 38,
+    imgPath: 'assets/img/projects/state-of-our-data/racial-overrepresentation.png',
+    caption: "The 2023 population of people in the Data Trust differs from the overall population of Mecklenburg County. People who identify as Black or African American or Multi-Racial are overrepresented (n=370,434)."
+  },
+  {
+    imgId: 39,
+    imgPath: 'assets/img/projects/state-of-our-data/npa-representation.png',
+    caption: "People in the Data Trust are represented in every NPA, with the lowest numbers in south and southeast parts of the county."
+  },
+  {
+    imgId: 40,
+    imgPath: 'assets/img/projects/state-of-our-data/racial-identities.png',
+    caption: "The racial and ethnic identities represented by the people in the Data Trust are complex and multifaceted (n=767,325)."
+  },{
+    imgId: 41,
+    imgPath: 'assets/img/projects/state-of-our-data/cover.png',
+    caption: 'State of Our Data Report'
+  }],
+  desc: "Co-authored the inaugural State of Our Data report which highlights different statistics and visualizations \
+  about people in the Charlotte-Mecklenburg region that are in the data we maintain. Given that much of the data \
+  reflects marginalized or underserved communities, the report aims to equip changemakers with the tools, systems, \
+  and insights needed to address regional social, economic, and environmental challenges.\
+  <br><br>\
+  The data in the report represents real people and communities—and often captures them at their most vulnerable moments. \
+  This responsibility demands rigorous privacy protections and an ethical commitment to ensure that every insight we \
+  generate ultimately benefits the individuals behind the numbers. \
+  <br><br>\
+  Analysis of our holdings shows that Black, African American, and multi-racial residents are overrepresented relative \
+  to Mecklenburg County’s overall population, and that many are concentrated in lower-income “crescent” neighborhoods. \
+  Recognizing these patterns is essential for accurate research and interpretation, for diversifying our data partners \
+  and governance bodies, and for combining multiple data sources to fully reflect the experiences of all community members.\
+  <br><br>\
+  By linking records across programs and partners, we empower researchers, leaders, and advocates to identify service gaps, \
+  improve coordination, and better support those engaged with multiple systems. Importantly, because much of our data arises \
+  from people’s most challenging days, these connections also highlight which individuals and neighborhoods face the greatest \
+  barriers to the quality of life we strive to achieve for everyone.",
+  url: "",
+  skills: ['Python','Plotly','Flourish'],
+  featured: false,
+  links:[{
+    name: 'State of Our Data Article',
+    url: 'https://ui.charlotte.edu/state-of-our-data/',
+    icon: 'link'
+
+  },{
+    name: 'State of Our Data Report',
+    url: 'assets/files/projects/state-of-our-data/CUI_SOOD-Report_WebReportAppendixA2025.pdf',
+    icon: 'link'
+
+  }]
 }];
