@@ -5,7 +5,7 @@
       <h1 class="heading"><b>{{ project.name }}</b></h1>
       <h3 class="heading">{{ project.caption }}</h3>
 
-      <ngb-carousel>
+      <ngb-carousel [keyboard]="false">
         <ng-template ngbSlide *ngFor="let img of project.images">
             <p>imgId: {{ img.imgId }}</p>
           <app-project-page-image [currentImage]="img"></app-project-page-image>
