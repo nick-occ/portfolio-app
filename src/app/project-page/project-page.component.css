@@ -9,6 +9,12 @@
   align-items: start;
 }
 
+@media (max-width: 1000px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .project-images,
 .project-details {
   width: 100%;
