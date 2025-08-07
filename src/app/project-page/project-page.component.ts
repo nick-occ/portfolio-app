@@ -1,5 +1,6 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { AfterViewInit, Component, OnInit, NgZone } from '@angular/core';
+import { take } from 'rxjs/operators';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { PortfolioService } from '../portfolio.service';
@@ -29,7 +30,9 @@ export class ProjectPageComponent implements OnInit, AfterViewInit {
     private route: ActivatedRoute,
     private portfolioService: PortfolioService,
     private location: Location,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private ngZone: NgZone,
+    private scroller: ViewportScroller,
   ) { }
 
   ngOnInit(): void {
@@ -45,7 +48,13 @@ export class ProjectPageComponent implements OnInit, AfterViewInit {
     this.id = +this.route.snapshot.paramMap.get('id');
     this.portfolioService.getProject(this.id).subscribe(project => {
       this.project = project;
-      console.log(project)
+
+      this.ngZone.onStable.pipe(take(1)).subscribe(() => {
+        requestAnimationFrame(() => {
+          this.scroller.scrollToPosition([0, 0]);
+          (document.activeElement as HTMLElement)?.blur();
+        });
+      });
     });
   }
 
