@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
@@ -19,7 +19,7 @@ import { ProjectPageImageComponent } from '../project-page-image/project-page-im
     standalone:true,
     imports:[CommonModule, MatCardModule, MatIconModule, NgbModule, ProjectPageImageComponent]
 })
-export class ProjectPageComponent implements OnInit {
+export class ProjectPageComponent implements OnInit, AfterViewInit {
 
   id: number;
   project: Project;
@@ -33,6 +33,10 @@ export class ProjectPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProject();
+    // window.scrollTo(0,0);
+  }
+
+  ngAfterViewInit(): void {
     window.scrollTo(0,0);
   }
 
