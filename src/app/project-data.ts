@@ -91,7 +91,7 @@ export const PROJECT: Project[] = [{
     'of delays each airline had throughout the year.  We also showed the top 5 carriers with delays and took a closer look at the ' +
     'manufacturers they are using in their fleet to see if the carriers have any similarities in manufacturers that are causing delays.',
   skills: ['R', 'Shiny', 'flexdashboard'],
-  featured: true,
+  featured: false,
   links: [{
     name: 'Airports Dashboard',
     url: 'https://nocchipi.shinyapps.io/design_contest_dashboard/?_ga=2.114496260.245395863.1613009679-571832064.1613009679',
@@ -424,7 +424,7 @@ export const PROJECT: Project[] = [{
   the correlation between two indicators and Moran's I to study spatial clustering.",
   url: "https://regionalexplorer.netlify.app/",
   skills: ['Angular','TypeScript','ArcGIS Online', 'ArcGIS JavaScript API'],
-  featured: false,
+  featured: true,
   links:[{
     name: 'Regional Explorer Web Map',
     url: 'https://regionalexplorer.netlify.app/',
