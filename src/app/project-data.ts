@@ -486,10 +486,5 @@ export const PROJECT: Project[] = [{
     url: 'https://ui.charlotte.edu/state-of-our-data/',
     icon: 'link'
 
-  },{
-    name: 'State of Our Data Report',
-    url: 'assets/files/projects/state-of-our-data/CUI_SOOD-Report_WebReportAppendixA2025.pdf',
-    icon: 'link'
-
   }]
 }];
