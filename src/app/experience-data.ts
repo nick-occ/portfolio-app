@@ -6,7 +6,7 @@ export const EXPERIENCE: Experience[] = [
   name: 'University of North Carolina at Charlotte',
   location: 'Charlotte, NC',
   role: 'Data Scientist',
-  startDate: 'June 2021',
+  startDate: 'June 2022',
   endDate: 'Present',
   desc: [
   "Work on the Charlotte Regional Data Trust where I securely integrate individual‐level administrative data across agencies in the Charlotte–Mecklenburg region. By linking records through a robust, privacy‐preserving system, the Data Trust is able to repurpose administrative data for research, evaluation, and planning.",
@@ -24,7 +24,7 @@ export const EXPERIENCE: Experience[] = [
   location: 'Charlotte, NC',
   role: 'GIS Developer',
   startDate: 'November 2017',
-  endDate: 'June 2021',
+  endDate: 'June 2022',
   desc: [
   'Administer ArcGIS Server, Portal and NGINX servers hosting mapping applications to support Facilities Management operations.',
   'Maintain the Campus’ web map application used by students, staff and visitors to find buildings and services on campus.',
