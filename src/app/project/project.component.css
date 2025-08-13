@@ -1,5 +1,8 @@
 .card {
   max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  height: 375px;
 }
 
 .example-header-image {
